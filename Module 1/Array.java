@@ -1,5 +1,5 @@
 class Array {
-    public static void main(String[] args){
+    public static void main(String [] args){
         int [] arr1 = {1,2,3};
         int [] arr2 = {3,5,6};
         int l1 = arr1.length;
