@@ -9,7 +9,7 @@ public class Threesum {
                 int sum = -(arr[i]+arr[j]);
                 int index = Arrays.binarySearch(arr, sum);
                 if(i < j && j < index) {
-                    System.out.println(arr[i]+","+arr[j]+","+index);
+                    System.out.println(arr[i]+","+arr[j]+","+arr[index]);
                     count++;
                 }
             }

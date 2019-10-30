@@ -1,7 +1,7 @@
 class Array {
     public static void main(String[] args){
         int [] arr1 = {1,2,3};
-        int [] arr2 = {4,5,6};
+        int [] arr2 = {3,5,6};
         int l1 = arr1.length;
         int l2 = arr2.length;
         int [] arr3 = new int[l1+l2];
