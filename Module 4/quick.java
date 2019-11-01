@@ -37,7 +37,7 @@ class quick {
     } 
     public static void main(String args[]) 
     { 
-        int arr[] = {5,2,7,9}; 
+        int arr[] = {2,3,4,1,5,3,7}; 
         int n = arr.length; 
         quick q = new quick(); 
         q.sort(arr, 0, n-1); 
