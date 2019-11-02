@@ -1,6 +1,7 @@
 final class Solution {
 	private Solution() { }
 	public static String isMatching(final String str) {
+		
 		String[] brackets = new String[str.length()];
 		brackets = str.split("");
 		String[] stack = new String[str.length()];
