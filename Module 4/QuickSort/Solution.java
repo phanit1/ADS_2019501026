@@ -5,7 +5,14 @@ class Solution{
         Solution q = new Solution(); 
         q.sort(arr, 0, n-1); 
 		return arr;
-	}
+    }
+    /**
+     * This is used to partition the sorted and unsorted elements aside
+     * @param arr , arr is the array to be sorted
+     * @param low , low is the lowest index
+     * @param high , high is the highest index
+     * @return index where to partition the array
+     */
 	int partition(int arr[], int low, int high) {
         int pivot = arr[high];  
         int i = (low-1); // index of smaller element 
@@ -24,13 +31,18 @@ class Solution{
         arr[i+1] = arr[high]; 
         arr[high] = temp; 
         return i+1; 
-    } 
+    }
+    /**
+     * This is used to sort the partitioned unsorted elements of array
+     * @param arr , arr is the array
+     * @param low , low is the lowest index
+     * @param high , high is the highest index
+     */
     void sort(int arr[], int low, int high) { 
         if (low < high) { 
             /* pi is partitioning index, arr[pi] is  
               now at right place */
-            int pi = partition(arr, low, high); 
-  
+            int pi = partition(arr, low, high);
             // Recursively sort elements before 
             // partition and after partition 
             sort(arr, low, pi-1); 

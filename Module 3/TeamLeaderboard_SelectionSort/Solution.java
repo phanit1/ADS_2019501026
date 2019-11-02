@@ -1,4 +1,13 @@
+/**.
+ * This is used to sort the leaderboard based on wins , losses and draws
+ * @author Phaneendhar
+ */
 class Solution{
+	/**
+	 * sorts the leaderboard of different teams
+	 * @param teams , array of different teams
+	 * @return
+	 */
 	public Team[] sort(Team[] teams){
 		// your code goes here
 		for (int i = 0; i < (teams.length)-1; i++) {
@@ -31,6 +40,10 @@ class Team implements Comparable<Team> {
 		//retrun all the attributes as a string but appending with ", "
         return "";
 	}
+	/**.
+	 * this is to sort teams by first no of wins, if they are equal then
+	 * no of losses , if they are also equal then no of draws
+	 */
 	public int compareTo(Team team) {
 		if (this.noOfWins > team.noOfWins)
 		return 1;
@@ -50,6 +63,6 @@ class Team implements Comparable<Team> {
 					return -1;
 				}
 			}
-		}return 0;
+		} return 0;
 	}
 }

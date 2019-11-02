@@ -1,4 +1,13 @@
-class Solution{
+/**.
+ * This solution is to sort the arrays using Insertion and Selection Sorting
+ * @author Phaneendhar
+ */
+class Solution {
+	/**
+	 * This is used to sort array by insertion sorting
+	 * @param arr , arr is the array to be sorted
+	 * @return sorted array
+	 */
 	public int[] sortInsertion(int[] arr){
 		int j , temp;
 		for (int i =1; i < arr.length; i++) {
@@ -12,6 +21,11 @@ class Solution{
 		}
 		return arr;
 	}
+	/**.
+	 * This is used to sort array by selection sorting
+	 * @param arr , arr is the array to be sorted
+	 * @return sorted array
+	 */
 	public int[] sortSelection(int[] arr){
 		for (int i = 0; i < arr.length-1; i++) {
 			int min = i;
@@ -25,7 +39,6 @@ class Solution{
 				arr[i] = temp;
 			
 		}
-		//System.out.println(Arrays.toString(arr));
 		return arr;
 	}
 }
