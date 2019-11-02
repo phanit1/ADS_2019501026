@@ -1,3 +1,7 @@
+/**.
+ * This is to sort the array using QuickSort
+ * @author Phaneendhar
+ */
 class Solution{
 	public static int[] quickSort(int[] arr){
 		// fill you code Here
