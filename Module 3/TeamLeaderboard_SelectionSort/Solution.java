@@ -37,7 +37,7 @@ class Team implements Comparable<Team> {
 		noOfLosses = losses;
 	}
 	public String toString(){
-		//retrun all the attributes as a string but appending with ", "
+		//return all the attributes as a string but appending with ", "
         return "";
 	}
 	/**.

@@ -1,33 +1,42 @@
+/**.
+ * This is used to match the same type of paranthesis by using stack operations.
+ * @author Phaneendhar
+ */
+import java.util.*;
 final class Solution {
-	private Solution() { }
-	public static String isMatching(final String str) {
-		
-		String[] brackets = new String[str.length()];
-		brackets = str.split("");
-		String[] stack = new String[str.length()];
-		int size = 0;
-		for (String eachBracket : brackets) {
-			if (eachBracket.equals("[")
-			|| eachBracket.equals("(") || eachBracket.equals("{")) {
-				stack[size++] = eachBracket;
-			} else if (size > 0) {
-				String recentBracket = stack[size - 1];
-				if (recentBracket.equals("[")
-				&& eachBracket.equals("]")) {
-					size--;
-				} else if (recentBracket.equals("(")
-				&& eachBracket.equals(")")) {
-					size--;
-				} else if (recentBracket.equals("{")
-				&& eachBracket.equals("}")) {
-					size--;
+	/**
+	 * This is used to perform operations of stack and to find the matching of paranthesis.
+	 * @param str , str is the string of paranthesis which is the main input
+	 * @return yes if the brackets match or no if brackets donot match
+	 */
+	public static String isMatching(String str) {
+		char[] brackets = str.toCharArray();
+		int length = brackets.length;
+		Stack<Character> stack = new Stack<Character>();
+		for (int i = 0; i < length; i++) {
+			/**.
+			 * if brackets are { or ( or [ then it pushes into stack
+			 */
+			if (brackets[i] == '(' || brackets[i] == '[' || brackets[i] == '{') {
+				stack.push(brackets[i]);
+			}
+			/**.
+			 * if brackets are } or ) or ] then it pops from stack
+			 */
+			if (brackets[i] == ')' || brackets[i] == ']' || brackets[i] == '}') {
+				if(stack.empty() == true) {
+					return "NO";
 				}
+				stack.pop();
 			}
 		}
-		if (size == 0) {
+		if (stack.empty() == true) {
 			return "YES";
-		} else {
+		}
+		else {
 			return "NO";
 		}
 	}
 }
+		
+	

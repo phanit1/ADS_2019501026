@@ -1,7 +1,4 @@
 /**.
- * This is used to perform Josephus problem based on circular linkedlist
- */
-/**.
  * This is used to perform circular linked list operations on Josephus problem
  * @author Phaneendhar
  */
