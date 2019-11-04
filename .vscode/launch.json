@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Array",
+            "request": "launch",
+            "mainClass": "Array",
+            "projectName": "ADS_2019501026_10164d9c"
+        }
+    ]
+}
