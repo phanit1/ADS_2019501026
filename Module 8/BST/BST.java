@@ -214,7 +214,7 @@ public class BST<Key extends Comparable<Key>, Value> {
     }
     /**
      * Checks the element greater than key which is smaller.
-     * @param key , key which is to be found floor
+     * @param key , key which is to be found ceil value
      * @return smallest key greater than or equal to key
      */
     public Key ceiling(Key key) {
