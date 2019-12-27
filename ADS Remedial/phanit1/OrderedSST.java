@@ -6,18 +6,8 @@ public class OrderedSST {
     public OrderedSST(int capacity) { 
         keys = new int[capacity]; 
         vals = new int[capacity]; 
-    }   
-    public int size() {
-        return n;
-    }
-    public boolean isEmpty() {
-        return size() == 0;
-    }
-    public boolean contains(int key) {
-        return get(key) != -1;
     }
     public int get(int key) {
-        if (isEmpty()) return -1;
         int i = rank(key); 
         if (i < n && keys[i]==key) return vals[i];
         return -1;
@@ -51,11 +41,7 @@ public class OrderedSST {
         n++;
     } 
     public void delete(int key) {
-        //if (isEmpty()) return;
         int i = rank(key);
-        if (i == n || keys[i]!=key) {
-            return;
-        }
         for (int j = i; j < n-1; j++)  {
             keys[j] = keys[j+1];
             vals[j] = vals[j+1];
@@ -70,6 +56,7 @@ public static void main(String[] args) {
     ss.put(99, 222);
     ss.put(4, 444);
     ss.put(1, 767);
+    ss.delete(99);
     for (int i = 0; i < ss.n; i++) {
         System.out.println(ss.keys[i]+"---"+ss.vals[i]);
     }
