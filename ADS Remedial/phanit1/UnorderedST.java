@@ -11,16 +11,6 @@ public class UnorderedST {
             this.next = next;
         }
     }
-    public int size() {
-        return n;
-    }
-    public boolean isEmpty() {
-        return size() == 0;
-    }
-    public boolean contains(int key) {
-        return get(key) != -1;
-    }
-
     public int get(int key) {
         for (Node x = first; x != null; x = x.next) {
             if (key==x.key)
@@ -29,10 +19,6 @@ public class UnorderedST {
         return -1;
     }
     public void put(int key, int val) {
-        if (val == -1) {
-            delete(key);
-            return;
-        }
         for (Node x = first; x != null; x = x.next) {
             if (key==x.key) {
                 x.val = val;
